@@ -1,0 +1,23 @@
+<h1>Nos Legos !</h1>
+<hr>
+<br>
+<% if current_user %>
+  <%= link_to 'add new set', new_gameset_path %>
+<% end %>
+
+<div class="container">
+  <div class="cards">
+    <% @gamesets.each do |gameset| %>
+      <div class="card">
+        <div class="img" style="background-image: url(<%="#{gameset.img}"%>)"></div>
+        <div class="body">
+          <span><%= gameset.name %></span>
+          <span><%= gameset.ref %></span>
+        </div>
+        <div class="footer">
+          <p><%= (link_to 'delete', gameset_path(gameset), method:'delete', data: {confirm: "are you sure?"}) if current_user %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

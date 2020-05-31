@@ -1,0 +1,15 @@
+.card {
+  width: 250px;
+}
+
+.card .img {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+}

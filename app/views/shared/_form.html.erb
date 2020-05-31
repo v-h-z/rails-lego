@@ -1,0 +1,7 @@
+<p>si le formulaire ne passe pas c'est que l'app ne trouve pas le set</p>
+<p>ne pas oublier le numéro de sous-modele (s'il n'y en a pas sur la boite, essayer '1'</p>
+<p>exemple : 75192-1 pour le faucon millenium</p>
+<%= simple_form_for(@gameset) do |f| %>
+  <%= f.input :ref %>
+  <%= f.button :submit, class:'btn btn-primary' %>
+<% end %>
